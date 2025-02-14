@@ -1,0 +1,370 @@
+/* Font
+  .montserrat-<uniquifier> {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* site styles */
+:root {
+  --primaryColorLight: #f2f2f2;
+  --secondaryColorLight: #a68077;
+  --primaryColorDark: #262523;
+  --secondaryColorDark: #733c30;
+  --alternateSecondaryColor: #f27a5e;
+  --footerColor: #ba9d97;
+  --tableBackgroundColor: #dbd9d9;
+  --medFontWeight: 600;
+}
+
+body {
+  background-color: var(--primaryColorLight);
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--medFontWeight);
+  color: var(--primaryColorDark);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--medFontWeight);
+  color: var(--primaryColorDark);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--medFontWeight);
+  color: var(--primaryColorDark);
+}
+
+p {
+  color: var(--primaryColorDark);
+}
+
+a {
+  color: var(--alternateSecondaryColor);
+  transition: font-size 0.3s;
+}
+
+a:visited {
+  color: var(--secondaryColorLight);
+}
+
+a:focus,
+a:hover {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:active {
+  /* selected link */
+  color: var(--primaryColorLight);
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primaryColorDark);
+}
+
+.page-header_item {
+  flex: 0 1 150px;
+}
+
+.page-header_item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.page_footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40;
+  padding: 40px;
+  background-color: var(--footerColor);
+}
+
+.page_footer p {
+  font-size: 20px;
+  font-weight: var(--medFontWeight);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Home page styles */
+.profile_portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: var(--secondaryColorDark);
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.profile a {
+  color: var(--secondaryColorDark);
+}
+
+/* About page */
+.cv {
+  display: flexbox;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cv a {
+  color: var(--primaryColorDark);
+  text-align: center;
+}
+
+.about_headshot {
+  float: left;
+  width: 400px;
+  margin: 40px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: var(--secondaryColorDark);
+}
+
+.about {
+  max-width: 80%;
+  margin: auto;
+  padding: 40;
+}
+
+.skills-table {
+  border: 2px solid var(--secondaryColorDark);
+  border-collapse: collapse;
+}
+
+.skills-table th,
+td {
+  border: 1px solid  var(--secondaryColorDark);
+  padding: 10px;
+}
+
+.skills-table th {
+  background-color: var(--alternateSecondaryColor);
+  color: var(--primaryColorDark);
+}
+
+.skills-table tr:nth-child(even) {
+  background-color: var(--tableBackgroundColor);
+}
+
+button,
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: var(--medFontWeight);
+  background-color: var(--alternateSecondaryColor);
+  color: var--(primary-color-dark);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--primaryColorDark);
+  transition: 0.4s;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+/* Work page */
+.work {
+  padding-left: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 40px;
+}
+
+.grid_item {
+  background-color: var(--alternateSecondaryColor);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; /* Changes the pointer to a hand */
+}
+
+.grid_item a {
+  color: var(--primaryColorDark);
+}
+
+.grid_item:hover {
+  transform: scale(1.05); /* Grows by 5% */
+}
+
+/* Contact page */
+.contact {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40;
+}
+
+.contact a {
+  color: var(--secondaryColorDark);
+}
+
+#contact-form {
+  width: 80%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--secondaryColorLight);
+  border-radius: 5px;
+}
+
+#contact-form input {
+  width: 100%;
+  padding: 10px;
+}
+
+#contact-form textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.standard-label {
+  font-weight: var(--medFontWeight);
+}
+
+.submit {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: var(--medFontWeight);
+  background-color: var(--alternateSecondaryColor);
+  color: var(--primaryColorDark);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--primaryColorDark);
+  transition: 0.4s;
+}
+
+.submit:hover,
+.submit:focus {
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.submit:active {
+  background-color: var(--primaryColorLight);
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid_item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
