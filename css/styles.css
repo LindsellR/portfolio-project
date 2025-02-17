@@ -134,20 +134,11 @@ a:active {
 }
 
 /* About page */
-.cv {
-  display: flexbox;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.cv a {
-  color: var(--primaryColorDark);
-  text-align: center;
-}
 
 .about_headshot {
   float: left;
-  width: 400px;
+  width: 250px;
+  height: auto;
   margin: 40px;
   border-radius: 50%;
   border: 2px solid;
@@ -180,6 +171,19 @@ td {
   background-color: var(--tableBackgroundColor);
 }
 
+.cv {
+  display: flexbox;
+  max-width: 80%;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+
+.cv a {
+  color: var(--primaryColorDark);
+  text-align: center;
+}
+
 button,
 .button {
   border: none;
@@ -205,6 +209,7 @@ button:focus,
 }
 
 /* Work page */
+
 .work {
   padding-left: 40px;
 }

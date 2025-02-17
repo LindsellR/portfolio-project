@@ -79,14 +79,14 @@ a:active {
 
 .page-header_item {
   -webkit-box-flex: 0;
-    -ms-flex: 0 1 150px;
-      flex: 0 1 150px;
+      -ms-flex: 0 1 150px;
+          flex: 0 1 150px;
 }
 
 .page-header_item:last-child {
   -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-      flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -106,8 +106,8 @@ a:active {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   margin-top: 40;
   padding: 40px;
@@ -145,20 +145,11 @@ a:active {
 }
 
 /* About page */
-.cv {
-  display: flexbox;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.cv a {
-  color: #262523;
-  text-align: center;
-}
 
 .about_headshot {
   float: left;
-  width: 400px;
+  width: 250px;
+  height: auto;
   margin: 40px;
   border-radius: 50%;
   border: 2px solid;
@@ -193,6 +184,19 @@ td {
 
 .skills-table tr:nth-child(even) {
   background-color: #dbd9d9;
+}
+
+.cv {
+  display: flexbox;
+  max-width: 80%;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 60px;
+}
+
+.cv a {
+  color: #262523;
+  text-align: center;
 }
 
 button {
@@ -237,6 +241,7 @@ button:focus,
 }
 
 /* Work page */
+
 .work {
   padding-left: 40px;
 }
@@ -267,8 +272,8 @@ button:focus,
 
 .grid_item:hover {
   -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-      transform: scale(1.05); /* Grows by 5% */
+      -ms-transform: scale(1.05);
+          transform: scale(1.05); /* Grows by 5% */
 }
 
 /* Contact page */
@@ -279,8 +284,8 @@ button:focus,
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-      flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   margin-top: 40;
 }
