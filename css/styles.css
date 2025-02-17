@@ -92,6 +92,7 @@ a:active {
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
+  flex-wrap: wrap;
 }
 
 .page_footer {

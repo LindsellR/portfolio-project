@@ -97,6 +97,8 @@ a:active {
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .page_footer {
@@ -259,11 +261,9 @@ button:focus,
   background-color: #f27a5e;
   padding: 15px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  cursor: pointer; /* Changes the pointer to a hand */
+  cursor: pointer;
 }
 
 .grid_item a {
