@@ -1,77 +1,76 @@
 /* Text colors #3a1024 #ebe7e9
- BG colors #ebe7e9 #4d2739
- Secondary #9c8791
+BG colors #ebe7e9 #4d2739
+Secondary #9c8791
 
 .montserrat-<uniquifier> {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+font-family: "Montserrat", serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
 } */
 
 body {
-    background-color: #ebe7e9;
-    font-family: "Montserrat", serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  h1 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  h3 {
-    font-size: 18px;
-    font-weight: 700;
-  }
-  
-  a {
-    color: #3a1024;
-  }
-  
-  a:visited {
-    color: #4d2739;
-  }
-  
-  a:hover a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none;
-  }
-  
-  a:active {
-    /* selected link */
-    color: #9c8791;
-  }
-  
-  button {
-    border: none;
-    font-family: inherit;
-    background-color: #3a1024;
-    color: #fffbfd;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #fffbfd;
-  }
-  
-  button:hover button:focus {
-    cursor: pointer;
-    opacity: 0.8;
-  }
-  
-  .button__secondary {
-    background-color: #9c8791;
-    color: #e9e9e9;
-  }
-  
-  .navigation-list__item--active {
-    text-decoration: none;
-  }
-  
+  background-color: #ebe7e9;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #3a1024;
+}
+
+a:visited {
+  color: #4d2739;
+}
+
+a:hover a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  /* selected link */
+  color: #9c8791;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  background-color: #3a1024;
+  color: #fffbfd;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #fffbfd;
+}
+
+button:hover button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary {
+  background-color: #9c8791;
+  color: #e9e9e9;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
