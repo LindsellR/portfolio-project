@@ -16,6 +16,14 @@
 /* site styles */
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #f2f2f2;
   font-family: "Montserrat", serif;
   font-weight: 400;
@@ -77,10 +85,24 @@ a:active {
   background-color: #262523;
 }
 
-.page-header_item {
+.page-header_item .main-navigation {
   -webkit-box-flex: 0;
   -ms-flex: 0 1 150px;
   flex: 0 1 150px;
+}
+
+.page-header > a {
+  width: 150px;
+  -webkit-transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.page-header > a:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
 .page-header_item:last-child {
@@ -111,9 +133,11 @@ a:active {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  margin-top: 40;
+  width: 100%;
+  bottom: 0;
   padding: 40px;
   background-color: #ba9d97;
+  margin-top: auto;
 }
 
 .page_footer p {
@@ -263,7 +287,7 @@ button:focus,
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  cursor: pointer;
+  cursor: pointer; /* Changes the pointer to a hand */
 }
 
 .grid_item a {

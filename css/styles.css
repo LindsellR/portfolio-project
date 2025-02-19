@@ -19,6 +19,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--primaryColorLight);
   font-family: "Montserrat", serif;
   font-weight: 400;
@@ -76,8 +79,18 @@ a:active {
   background-color: var(--primaryColorDark);
 }
 
-.page-header_item {
+.page-header_item .main-navigation {
   flex: 0 1 150px;
+}
+
+.page-header > a {
+  width: 150px;
+  transition: transform 0.3s;
+}
+
+.page-header > a:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
 
 .page-header_item:last-child {
@@ -100,9 +113,11 @@ a:active {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 40;
+  width: 100%;
+  bottom: 0;
   padding: 40px;
   background-color: var(--footerColor);
+  margin-top: auto;
 }
 
 .page_footer p {
