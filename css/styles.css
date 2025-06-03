@@ -8,12 +8,12 @@
 
 /* site styles */
 :root {
-  --primaryColorLight: #f2f2f2;
-  --secondaryColorLight: #a68077;
-  --primaryColorDark: #262523;
-  --secondaryColorDark: #733c30;
-  --alternateSecondaryColor: #f27a5e;
-  --footerColor: #ba9d97;
+  --primaryColorLight: #d0d2d9;
+  --secondaryColorLight: #989ca6;
+  --primaryColorDark: #010326;
+  --secondaryColorDark: #0d0d0d;
+  --alternateSecondaryColor: #898379;
+  --footerColor: #8c8c8c;
   --tableBackgroundColor: #dbd9d9;
   --medFontWeight: 600;
 }
@@ -52,12 +52,12 @@ p {
 }
 
 a {
-  color: var(--alternateSecondaryColor);
+  color: var(--primaryColorLight);
   transition: font-size 0.3s;
 }
 
 a:visited {
-  color: var(--secondaryColorLight);
+  color: var(--alternateSecondaryColor);
 }
 
 a:focus,
@@ -69,7 +69,7 @@ a:hover {
 
 a:active {
   /* selected link */
-  color: var(--primaryColorLight);
+  color: var(--secondaryColorLight);
 }
 
 .page-header {
@@ -134,9 +134,6 @@ a:active {
   float: left;
   width: 250px;
   margin-right: 40px;
-  border-radius: 50%;
-  border: 2px solid;
-  border-color: var(--secondaryColorDark);
 }
 
 .profile {
@@ -156,15 +153,19 @@ a:active {
   width: 250px;
   height: auto;
   margin: 40px;
-  border-radius: 50%;
-  border: 2px solid;
-  border-color: var(--secondaryColorDark);
+  border-radius: 5%;
 }
 
 .about {
   max-width: 80%;
   margin: auto;
   padding: 40;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
 .skills-table {
@@ -179,7 +180,7 @@ td {
 }
 
 .skills-table th {
-  background-color: var(--alternateSecondaryColor);
+  background-color: var(--secondaryColorLight);
   color: var(--primaryColorDark);
 }
 
@@ -188,16 +189,12 @@ td {
 }
 
 .cv {
-  display: flexbox;
+  display: flex;
+  justify-content: center;
   max-width: 80%;
   text-align: left;
   margin-bottom: 40px;
   margin-left: 60px;
-}
-
-.cv a {
-  color: var(--primaryColorDark);
-  text-align: center;
 }
 
 button,
@@ -206,8 +203,8 @@ button,
   display: inline-block;
   font-family: inherit;
   font-weight: var(--medFontWeight);
-  background-color: var(--alternateSecondaryColor);
-  color: var--(primary-color-dark);
+  background-color: var(--secondaryColorLight);
+  color: var(--primary-color-dark);
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
@@ -238,10 +235,11 @@ button:focus,
 }
 
 .grid_item {
-  background-color: var(--alternateSecondaryColor);
+  background-color: var(--secondaryColorLight);
   padding: 15px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer; /* Changes the pointer to a hand */
+  border-radius: 5px;
 }
 
 .grid_item a {
@@ -313,6 +311,63 @@ button:focus,
   background-color: var(--primaryColorLight);
 }
 
+/* Meet app details page */
+
+.meet-deets {
+  width: 100%;
+  max-width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.meet-visual img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container {
+  border: 1.5px solid #333;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.container h2 {
+  margin-top: 0;
+}
+
+.container ul {
+  padding-left: 20px;
+}
+
+.applinks {
+  width: 80%;
+  margin: auto;
+  padding-top: 40px;
+  color: var(--primaryColorDark);
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .meet-deets {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .meet-visual img {
+    max-width: 100%;
+  }
+}
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
@@ -338,54 +393,4 @@ button:focus,
   h1 {
     font-size: 22px;
   }
-}
-
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-
-  50% {
-    fill: #fcffad;
-  }
-
-  100% {
-    fill: #f76414;
-  }
-}
-
-.sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-
-  to {
-    transform: translate(200px, 50px);
-  }
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 48px);
-  }
-
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
 }
