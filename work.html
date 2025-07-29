@@ -13,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.production.css">
 
 </head>
 
 <body>
     <header class="page-header">
-        <a href="index.html"><img src="img/RL_logo.svg" width="150" alt="Personal logo of Richard Lindsell" class="page-header_item"></a>
+        <a href="index.html"><img src="img/RL_logo.svg" width="150" alt="Personal logo of Richard Lindsell"
+                class="page-header_item"></a>
         <nav class="main-navigation page-header_item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
@@ -42,51 +43,61 @@
 
     <section>
         <h1 class="work">Work</h1>
+        <p class="work">Take a look at some of my recent projects</p>
         <div class="grid">
-            <div class="grid_item" role="Link">
-                <h2>Progressive Web App</h2>
-                <p>
-                    A serverless progressive web application (PWA) built using a test driven development (TDD) approach and utilising a Google Calendars API to fetch events, OAuth2 authentication and AWS serverless functions.
-                </p>
-                <a href="https://meet-mu-fawn.vercel.app/" role="Link">Go to app</a>
+            <div class="grid_item">
+                <div class="image-container">
+                    <img src="../img/work_pg_img/Meet.jpg" alt="Meet.app">
+                    <div class="overlay">
+                        <h2 class="title">Progressive Web App</h2>
+                        <a href="Projects/meet.html" class="hover-button" role="link">View Details</a>
+                    </div>
+                </div>
             </div>
             <div class="grid_item">
-                <h2>Native MacOS application</h2>
-                <p>
-                    Within this project, I was responsible for the frontend. It's written in JavaFX.
-                </p>
-                <a href="#">See project on Github</a>
+                <div class="image-container">
+                    <img src="../img/work_pg_img/pokedex.jpg" alt="Pokedex logo">
+                    <div class="overlay">
+                        <h2 class="title">Pokemon-Pokedex</h2>
+                        <a href="Projects/js_app.html" class="hover-button" role="link">View Details</a>
+                    </div>
+                </div>
             </div>
             <div class="grid_item">
-                <h2>Node.js pdf generation</h2>
-                <p>
-                    Within this project, I created a service that generates pdf out of webpages with the help of a
-                    node.js server.
-                </p>
-                <a href="#">See project on Github</a>
+                <div class="image-container">
+                    <img src="../img/work_pg_img/Chat.jpg" alt="Chat app welcome screen">
+                    <div class="overlay">
+                        <h2 class="title">Chat-App</h2>
+                        <a href="Projects/chat-app.html" class="hover-button" role="link">View Details </a>
+                    </div>
+                </div>
+            </div>
+              <div class="grid_item">
+                <div class="image-container">
+                    <img src="../img/work_pg_img/Movie-Geeks_React.jpg" alt="Movie-Geeks App main view">
+                    <div class="overlay">
+                        <h2 class="title">Movie-Geeks Client</h2>
+                        <a href="Projects/movie-geeks-react.html" class="hover-button" role="link">View Details</a>
+                    </div>
+                </div>
             </div>
             <div class="grid_item">
-                <h2>Styleguide for portfolio page</h2>
-                <p>
-                    Here you can find the styleguide I created for this portfolio page. It was created with
-                    livingstyleguide gem and grunt.
-                </p>
-                <a href="#">See styleguide</a>
+                <div class="image-container">
+                    <img src="../img/work_pg_img/Movie-Geeks_API.jpg" alt="Roll of film representing Movie-Geeks API">
+                    <div class="overlay">
+                        <h2 class="title">Movie-Geeks Server</h2>
+                        <a href="Projects/movie-geeks-Rest.html" class="hover-button" role="link">View Details</a>
+                    </div>
+                </div>
             </div>
             <div class="grid_item">
-                <h2>Medium Blog</h2>
-                <p>
-                    I am also writing on medium.com about React.js.
-                </p>
-                <a href="#">Read my latest blogpost</a>
-            </div>
-            <div class="grid_item">
-                <h2>Your project?</h2>
-                <p>
-                    I can help in realizing front-end and back-end projects with the following technologies: React.js,
-                    JavaScript, Java, JavaFX, HTML and CSS. I am also happy to learn other technologies if needed.
-                </p>
-                <a href="#">Contact me</a>
+                <div class="image-container">
+                    <img src="../img/work_pg_img/myFlix_Angular.jpg" alt="myFlix app main view">
+                    <div class="overlay">
+                        <h2 class="title">myFlix Angular App</h2>
+                        <a href="Projects/myFlix.html" class="hover-button" role="link">View Details</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -96,11 +107,11 @@
         <div>
             <a href="https://www.linkedin.com/home" target="_blank">
                 <img src="./img/linkedin_icon.svg" alt="linkedin icon"></a>
-            <a href="https://github.com" target="_blank">
+            <a href="https://github.com/LindsellR" target="_blank">
                 <img src="./img/github_icon.svg" alt="github icon"></a>
         </div>
     </footer>
-    <script src="js/tota11y.min.js"></script>
+    <!-- <script src="js/tota11y.min.js"></script> -->
 </body>
 
 </html>

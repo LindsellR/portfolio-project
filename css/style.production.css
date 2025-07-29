@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Font
   .montserrat-<uniquifier> {
   font-family: "Montserrat", serif;
@@ -151,16 +158,19 @@ a:active {
 }
 
 /* Home page styles */
-.profile_portrait {
-  float: left;
-  width: 250px;
-  margin-right: 40px;
-}
-
 .profile {
   max-width: 700px;
   margin: 0 auto;
   padding: 60px;
+}
+
+.profile_portrait {
+  float: left;
+  width: 300px;
+  height: auto;
+  margin-right: 40px;
+  border-radius: 50%;
+  border: solid 1px
 }
 
 .profile a {
@@ -168,6 +178,12 @@ a:active {
 }
 
 /* About page */
+.about {
+  display: block;
+  max-width: 80%;
+  margin: auto;
+  padding: 40;
+}
 
 .about_headshot {
   float: left;
@@ -175,12 +191,6 @@ a:active {
   height: auto;
   margin: 40px;
   border-radius: 5%;
-}
-
-.about {
-  max-width: 80%;
-  margin: auto;
-  padding: 40;
 }
 
 .skills {
@@ -192,8 +202,15 @@ a:active {
   justify-content: center;
   margin-bottom: 60px;
 }
+.table-wrapper {
+  width: 90%;
+  max-width: 600px;
+  overflow-x: auto;
+}
 
 .skills-table {
+  width: 100%;
+  /* min-width: 600px; prevents squishing on smaller screens */
   border: 2px solid #0d0d0d;
   border-collapse: collapse;
 }
@@ -224,39 +241,24 @@ td {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  max-width: 80%;
-  text-align: left;
-  margin-bottom: 40px;
-  margin-left: 60px;
+  width:100%;
+
+  margin: 40px auto
 }
 
-button {
-  border: none;
-  display: inline-block;
-  font-family: inherit;
-  font-weight: 600;
-  background-color: #989ca6;
-  color: #010326;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #010326;
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-}
 
 .button {
   border: none;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: inherit;
-  font-weight: 600;
-  background-color: #989ca6;
-  color: #010326;
+  font-weight: 400;
+  background-color: #010326;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #010326;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
@@ -269,41 +271,112 @@ button:focus,
   cursor: pointer;
   opacity: 0.8;
   font-size: 14px;
+  color: #010326;
+  background-color: #898379 ;
 }
 
 /* Work page */
 
 .work {
-  padding-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .grid {
+  width: 80%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-  margin: 20px 40px;
+  margin: 20px auto;;
 }
 
 .grid_item {
-  background-color: #989ca6;
-  padding: 15px;
+  background-color: #010326;
   -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   cursor: pointer; /* Changes the pointer to a hand */
   border-radius: 5px;
 }
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
 
-.grid_item a {
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010326;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px; /* Optional: helps prevent text overflow */
+  color: #dbd9d9;
+}
+
+.hover-button {
+  background-color: #ffffff;
   color: #010326;
+  padding: 0.6em 1.2em; /* Relative padding */
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem); /* Responsive font */
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 80%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.grid_item:hover {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05); /* Grows by 5% */
+.image-container:hover .overlay {
+  opacity: 1;
 }
+
+/* .grid_item a {
+  color: #5f62a7;
+} */
+
+
 
 /* Contact page */
 .contact {
@@ -373,9 +446,9 @@ button:focus,
   background-color: #d0d2d9;
 }
 
-/* Meet app details page */
+/* Project details pages */
 
-.meet-deets {
+.details {
   width: 100%;
   max-width: 80%;
   margin: 20px auto;
@@ -383,9 +456,9 @@ button:focus,
   text-align: center;
 }
 
-.meet-visual img {
+.visual img {
   width: 100%;
-  max-width: 500px;
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
 }
@@ -395,6 +468,7 @@ button:focus,
   background-color: #fff;
   padding: 20px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   text-align: left;
 }
@@ -406,17 +480,38 @@ button:focus,
 .container ul {
   padding-left: 20px;
 }
-
 .applinks {
-  width: 80%;
-  margin: auto;
-  padding-top: 40px;
-  color: #010326;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 3rem;       /* spacing between buttons */
+  margin: 2rem 0;
 }
 
+.app_button {
+  background-color: #010326;
+  color:  #fff;
+  text-decoration: none;
+  padding: 1rem;
+  width: clamp(200px, 30vw, 250px); /* responsive width */
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.app_button:hover,
+.app_button:focus {
+  opacity: 0.85;
+  outline: none;
+  color: #010326;
+  background-color: #898379 ;
+}
+
+
 @media screen and (max-width: 768px) {
-  .meet-deets {
+  .details {
     max-width: 95%;
     padding: 10px;
   }
@@ -425,7 +520,7 @@ button:focus,
     padding: 15px;
   }
 
-  .meet-visual img {
+  .visual img {
     max-width: 100%;
   }
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/r_lindsell_favicon.ico">
+    <title>Richard Lindsell Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/style.production.css">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <a href="../index.html"><img src="../img/RL_logo.svg" alt="Personal logo of Richard Lindsell"
+                class="page-header_item"></a>
+        <nav class="main-navigation page-header_item">
+            <ul role="menubar" class="navigation-list">
+                <li role="presentation">
+                    <a href="../index.html" role="menuitem"
+                        class="navigation-list_item navigation-list__item--active">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="../about.html" role="menuitem" aria-label="about me" class="navigation-list__item">About</a>
+                </li>
+                <li role="presentation">
+                    <a href="../work.html" role="menuitem" aria-label="some examples of my work"
+                        class="navigation-list__item">Work</a>
+                </li>
+                <li role="presentation">
+                    <a href="../contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="details">
+            <h1>
+                myFlix Angular app
+            </h1>
+            <div class="container">
+                <h2>Project Overview</h2>
+                <p>
+                    A responsive, single-page Angular application that allows users to explore a curated selection of classic movies. This is the Angular built front-end client for the Movie-Geeks REST API.
+                    <br>
+                    Users are able to:
+                </p>
+                <ul>
+                    <li>View movie data, including details about genres, and directors.</li>
+                    <li>Register and manage user accounts</li>
+                    <li>Add or remove favorite movies</li>
+                    <li>Upload a profile picture</li>
+                </ul>
+            </div>
+
+            <div class="visual">
+                <img src="../img/projects_img/myFlix_App.png " width="800px" height="auto"
+                    alt="Sample image from The Movie-Geeks-Rest API databse object ">
+            </div>
+
+            <div class="container">
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>Angular 19</li>
+                    <li>Angular Material</li>
+                    <li>TypeScript</li>
+                    <li>Typedoc</li>
+                    <li>RxJS</li>
+                    <li>MongoDB, Express.js (back-end API)</li>
+                    <li>JWT Authentication (handled by the Movie-Geeks API backend)</li>
+                    <li>Github pages for app hosting</li>
+                </ul>
+            </div>
+
+            <div class="container">
+                <h2>Objective</h2>
+                <p>
+                    Rebuild the client side to the Movie-Geeks API using Angular instead of React. The user requirements are much the same, users can signup or login to the app, view all the movies, get information about a movies director genre and the movie bio, save a movie to a favourites list in a user profile and change their details.
+                </p>
+            </div>
+
+            <div class="container">
+                <h2>The Experience</h2>
+                <p>
+                    It was great to measure the differences using the Angular framework utilizing TypeScript in a straight comparison to React by designing the same frontend to the same Movie-Geeks API. I really liked the tight structure of Angular components (I used the newer standalone components), and the two way data binding, even though it may seem quite cumbersome with the large bundle size. I also found the use of generics with Typescript and its tight structure very helpful in picking up and pinpointing type errors in the editor. I look forward to learning more about Typescript. I made a few changes with the styling and functionality of the app, using a side scrolling feature to display all films, and dialog boxes to display the features rather than a single movie view but kept to the art deco theme</p>
+
+
+                <h3>The process included:</h3>
+                <ul>
+                    <li>Create the app using Angular CLI</li>
+                    <li>Implement user registration and login forms using Angular Material</li>
+                    <li> Implement Angular components and define the app routing</li>
+                    <li>Style the app using the React Bootstrap library</li>
+                    <li>Comment the backend and frontend code using JSDoc and TypeDoc</li>
+                </ul>
+            </div>
+            <div class="applinks">
+                <a href="https://lindsellr.github.io/myFlix-Angular-client/" target="_blank" class="app_button">Live Website</a>
+                <a href="https://github.com/LindsellR/myFlix-Angular-client" target="_blank" class="app_button">Go To Github
+                    Repository</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page_footer">
+        <p>Find me on</p>
+        <div>
+            <a href="https://www.linkedin.com/home" target="_blank">
+                <img src="../../img/linkedin_icon.svg" alt="linkedin icon"></a>
+            <a href="https://github.com/LindsellR" target="_blank">
+                <img src="../../img/github_icon.svg" alt="github icon"></a>
+        </div>
+    </footer>
+    <!-- <script src="../../js/tota11y.min.js"></script> -->
+</body>
+
+</html>
