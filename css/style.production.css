@@ -130,6 +130,30 @@ a:active {
   flex-wrap: wrap;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 150px;
+  transition: transform 0.3s;
+}
+
+.logo-img:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Montserrat', serif; 
+}
+
+
 .page_footer {
   clear: both;
   display: -webkit-box;
@@ -170,7 +194,7 @@ a:active {
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
-  border: solid 1px
+  box-shadow: 0 8px 12px #010326;
 }
 
 .profile a {
@@ -187,10 +211,11 @@ a:active {
 
 .about_headshot {
   float: left;
-  width: 250px;
+  width: 300px;
   height: auto;
   margin: 40px;
-  border-radius: 5%;
+  border-radius: 50%;
+  box-shadow: 0 8px 12px #010326;
 }
 
 .skills {
@@ -273,6 +298,7 @@ button:focus,
   font-size: 14px;
   color: #010326;
   background-color: #898379 ;
+  box-shadow: 0 4px 8px #010326;
 }
 
 /* Work page */
@@ -461,6 +487,12 @@ button:focus,
   max-width: 80%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 8px 12px #010326;
+}
+.chat-visual img {
+  width: 250px;
+  border-radius: 5px;
+  box-shadow: 0 6px 8px #010326;
 }
 
 .container {
@@ -507,6 +539,7 @@ button:focus,
   outline: none;
   color: #010326;
   background-color: #898379 ;
+  box-shadow: 0 8px 12px #010326;
 }
 
 
