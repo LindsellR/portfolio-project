@@ -279,14 +279,6 @@ a:visited {
 }
 
 
-/* Responsive tweaks */
-/* @media (max-width: 600px) {
-  .skills-table th, .skills-table td {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
-} */
-
 .button {
   border: none;
   display: -webkit-box;
