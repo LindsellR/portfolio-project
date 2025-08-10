@@ -18,22 +18,26 @@
 </head>
 
 <body>
-       <header class="page-header">
+    <header class="page-header">
         <div class="logo-container page-header_item">
             <a href="../index.html">
                 <img src="../img/RL_logo.svg" alt="Personal logo of Richard Lindsell" class="logo-img" />
             </a>
             <span class="logo-text">Web Developer</span>
         </div>
+        <!-- Hamburger button -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            &#9776;
+        </button>
 
         <nav class="main-navigation page-header_item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
-                    <a href="../index.html" role="menuitem"
-                        class="navigation-list_item">Home</a>
+                    <a href="../index.html" role="menuitem" class="navigation-list_item">Home</a>
                 </li>
                 <li role="presentation">
-                    <a href="../about.html" role="menuitem" aria-label="about me" class="navigation-list__item ">About</a>
+                    <a href="../about.html" role="menuitem" aria-label="about me"
+                        class="navigation-list__item ">About</a>
                 </li>
                 <li role="presentation">
                     <a href="../work.html" role="menuitem" aria-label="some examples of my work"
@@ -53,7 +57,8 @@
             <div class="container">
                 <h2>Project Overview</h2>
                 <p>
-                    A responsive, single-page Angular application that allows users to explore a curated selection of classic movies. This is the Angular built front-end client for the Movie-Geeks REST API.
+                    A responsive, single-page Angular application that allows users to explore a curated selection of
+                    classic movies. This is the Angular built front-end client for the Movie-Geeks REST API.
                     <br>
                     Users are able to:
                 </p>
@@ -87,14 +92,25 @@
             <div class="container">
                 <h2>Objective</h2>
                 <p>
-                    Rebuild the client side to the Movie-Geeks API using Angular instead of React. The user requirements are much the same, users can signup or login to the app, view all the movies, get information about a movies director genre and the movie bio, save a movie to a favourites list in a user profile and change their details.
+                    Rebuild the client side to the Movie-Geeks API using Angular instead of React. The user requirements
+                    are much the same, users can signup or login to the app, view all the movies, get information about
+                    a movies director genre and the movie bio, save a movie to a favourites list in a user profile and
+                    change their details.
                 </p>
             </div>
 
             <div class="container">
                 <h2>The Experience</h2>
                 <p>
-                    It was great to measure the differences using the Angular framework utilizing TypeScript in a straight comparison to React by designing the same frontend to the same Movie-Geeks API. I really liked the tight structure of Angular components (I used the newer standalone components), and the two way data binding, even though it may seem quite cumbersome with the large bundle size. I also found the use of generics with Typescript and its tight structure very helpful in picking up and pinpointing type errors in the editor. I look forward to learning more about Typescript. I made a few changes with the styling and functionality of the app, using a side scrolling feature to display all films, and dialog boxes to display the features rather than a single movie view but kept to the art deco theme</p>
+                    It was great to measure the differences using the Angular framework utilizing TypeScript in a
+                    straight comparison to React by designing the same frontend to the same Movie-Geeks API. I really
+                    liked the tight structure of Angular components (I used the newer standalone components), and the
+                    two way data binding, even though it may seem quite cumbersome with the large bundle size. I also
+                    found the use of generics with Typescript and its tight structure very helpful in picking up and
+                    pinpointing type errors in the editor. I look forward to learning more about Typescript. I made a
+                    few changes with the styling and functionality of the app, using a side scrolling feature to display
+                    all films, and dialog boxes to display the features rather than a single movie view but kept to the
+                    art deco theme</p>
 
 
                 <h3>The process included:</h3>
@@ -107,8 +123,10 @@
                 </ul>
             </div>
             <div class="applinks">
-                <a href="https://lindsellr.github.io/myFlix-Angular-client/" target="_blank" class="app_button">Live Website</a>
-                <a href="https://github.com/LindsellR/myFlix-Angular-client" target="_blank" class="app_button">Go To Github Repository</a>
+                <a href="https://lindsellr.github.io/myFlix-Angular-client/" target="_blank" class="app_button">Live
+                    Website</a>
+                <a href="https://github.com/LindsellR/myFlix-Angular-client" target="_blank" class="app_button">Go To
+                    Github Repository</a>
                 <a href="../work.html" target="_blank" class="app_button">Go Back</a>
             </div>
         </div>
@@ -121,11 +139,22 @@
                 <img src="../../img/InBug-White.png" class="icon" alt="linkedin icon"></a>
             <a href="https://github.com/LindsellR" target="_blank">
                 <img src="../../img/github-mark-white.png" class="icon" alt="github icon"></a>
-            <a href="https://x.com/LindsellR63" target="_blank"><img src="../../img/x_logo-white.png" class="icon" alt="X icon"></a>
-             <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="../../img/Medium-Icon-White.png" class="icon" alt="Medium icon"></a>
+            <a href="https://x.com/LindsellR63" target="_blank"><img src="../../img/x_logo-white.png" class="icon"
+                    alt="X icon"></a>
+            <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="../../img/Medium-Icon-White.png"
+                    class="icon" alt="Medium icon"></a>
         </div>
     </footer>
     <!-- <script src="../../js/tota11y.min.js"></script> -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            const navList = document.querySelector(".navigation-list");
+            navList.classList.toggle("show");
+
+            const expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+        });
+    </script>
 </body>
 
 </html>

@@ -32,7 +32,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #030418;
-;
   font-family: "Montserrat", serif;
   font-weight: 400;
   font-size: 16px;
@@ -91,6 +90,8 @@ a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center; /* vertically center items */
+  justify-content: space-between; /* push first and last items to edges */-child
   width: 100%;
   padding: 20px;
   background-color: #070a20;
@@ -116,22 +117,17 @@ a:visited {
   cursor: pointer;
 }
 
-.page-header_item:last-child {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  text-align: right;
-}
-
 .navigation-list {
   list-style-type: none;
+  display: flex;           /* Show navigation links inline on desktop */
+  align-items: center;     /* Vertically center nav items */
+  margin: 0;               /* Reset default ul margin */
+  padding: 0;
 }
 
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .navigation-list__item--active {
@@ -146,22 +142,13 @@ a:visited {
 }
 
 .logo-img {
-  width: 150px;
+  width: 100px;
   transition: transform 0.3s;
 }
 
 .logo-img:hover {
   transform: scale(0.9);
   cursor: pointer;
-}
-
-.logo-text {
-  position: relative;
-  right: -30px;
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-family: 'Montserrat', serif; 
 }
 
 /*PAGE FOOTER STYLES*/
@@ -208,15 +195,21 @@ a:visited {
 }
 
 .profile_portrait {
-  float: left;
   width: 300px;
-  height: 300px;
-  margin-right: 40px;
   border-radius: 50%;
+  margin-right: 40px;
 }
-.work_button{
+
+.profile-text {
+  flex: 1;
+  margin 40px;
+}
+
+.work_button {
   margin-top: 3rem;
+  display: inline-block; /* make sure button shrinks to content */
 }
+
 
 .profile a {
   color: #d0d2d9;
@@ -237,7 +230,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center; /* Ensures button is centered under image */
-  width: 350px; /* Matches image width */
+  width: 300px; /* Matches image width */
 }
 
 .about_headshot {
@@ -256,77 +249,33 @@ a:visited {
   min-width: 300px;
 }
 
-
-.skills {
+.skills-section {
   display: flex;
-  justify-content: center;
+  gap: rem;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 60px;
 }
 
-.table-wrapper {
-  width: 90%;
-  max-width: 600px;
-  overflow-x: auto;
-  background: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.skills-section section {
+  flex: 1 1 300px; responsive widths
+}
+.skills-section h3{
+  background-color: #dbd9d9;
+  border-radius: 3px;
+  margin: 2rem;
+  text-align: center;
 }
 
-.skills-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: 10px;
-  overflow: hidden;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 1rem;
-  color: #010326;
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem;
 }
 
-/* Table Header styling */
-.skills-table thead {
-  background-color: #f27a5d;
-  color: #010326;
-}
-
-.skills-table th, .skills-table td {
-  text-align: left;
-  padding: 12px 16px;
-}
-
-/* Zebra striping */
-.skills-table tbody tr:nth-child(even) {
-  background-color: #e8e8e8;
-}
-
-.skills-table tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-/* Rounded corners on first and last cells */
-.skills-table tr:first-child th:first-child {
-  border-top-left-radius: 10px;
-}
-
-.skills-table tr:first-child th:last-child {
-  border-top-right-radius: 10px;
-}
-
-.skills-table tr:last-child td:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-.skills-table tr:last-child td:last-child {
-  border-bottom-right-radius: 10px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .skills-table th, .skills-table td {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
+.skills-section li {
+  padding: 4px;
+  color:#dbd9d9;
+  border-bottom: 1px solid #ddd;
+  background-color:#030523
 }
 
 
@@ -465,7 +414,6 @@ button:focus,
 /* .grid_item a {
   color: #5f62a7;
 } */
-
 
 
 /* CONTACT PAGE */
@@ -616,7 +564,7 @@ button:focus,
   box-shadow: 0 8px 12px #010326;
 }
 
-
+/* Responsive styling */
 @media screen and (max-width: 768px) {
   .details {
     max-width: 95%;
@@ -675,3 +623,98 @@ button:focus,
     text-align: center;
   }
 }
+
+/* Hide hamburger by default */
+.hamburger {
+  display: none;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    color: #fff;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d0d2d9;
+    margin-left: auto;
+  }
+    .hamburger:hover,
+  .hamburger:focus {
+    color: #fafafa; /* slightly lighter on hover */
+    outline: none;
+  }
+
+  .hamburger:active {
+    color: #b0b0b0; /* subtle pressed effect */
+  }
+
+
+  /* Prevent nav from pushing hamburger away */
+  .page-header_item:last-child {
+    flex-grow: 0;
+    text-align: left;
+  }
+
+  /* Hide menu on mobile */
+  .navigation-list {
+    display: none;
+    flex-direction: column;
+    background: #070a20;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    box-shadow: 0 4px 6px #fff;
+    z-index: 1000;
+  }
+
+  /* Show when toggled */
+  .navigation-list.show {
+    display: flex;
+  }
+
+  .navigation-list li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+/*Home page smaller screens*/
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .portrait-container,
+  .profile-content {
+    flex: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+  .portrait-container h1,
+  .portrait-container p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+  .profile-content {
+    margin-top: 20px;
+  }
+    .profile a.button {
+    display: block;           /* makes the button take full line */
+    margin: 3rem auto 0;      /* margin-top plus auto left/right centers */
+    width: fit-content;       /* shrink width to content */
+  }
+}
+

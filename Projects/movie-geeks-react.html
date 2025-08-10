@@ -25,6 +25,10 @@
             </a>
             <span class="logo-text">Web Developer</span>
         </div>
+        <!-- Hamburger button -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            &#9776;
+        </button>
 
         <nav class="main-navigation page-header_item">
             <ul role="menubar" class="navigation-list">
@@ -139,6 +143,15 @@
         </div>
     </footer>
     <!-- <script src="../../js/tota11y.min.js"></script> -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            const navList = document.querySelector(".navigation-list");
+            navList.classList.toggle("show");
+
+            const expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+        });
+    </script>
 </body>
 
 </html>
