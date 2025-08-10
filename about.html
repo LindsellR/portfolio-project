@@ -22,8 +22,11 @@
             <a href="index.html">
                 <img src="img/RL_logo.svg" alt="Personal logo of Richard Lindsell" class="logo-img" />
             </a>
-            <span class="logo-text">Web Developer</span>
         </div>
+        <!-- Hamburger button -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            &#9776;
+        </button>
 
         <nav class="main-navigation page-header_item">
             <ul role="menubar" class="navigation-list">
@@ -51,7 +54,7 @@
                 <img src="img/r_lindsell_headshot2.jpg" alt="Image of site owner Richard Lindsell"
                     class="about_headshot">
                 <div class="cv">
-                    <a href="richard_lindsell_CV.pdf" class="button" download>Download CV</a>
+                    <a href="R_Lindsell-cv.pdf" class="button" download>Download CV</a>
                 </div>
             </div>
             <div class="about_text">
@@ -67,131 +70,33 @@
                 </p>
             </div>
         </div>
-        <div class="skills">
-            <div class="table-wrapper">
-                <table class="skills-table">
-                    <thead>
-                        <tr>
-                            <th>Web Development  Skill</th>
-                            <th>Proficiency</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HTML5 / CSS3</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 85%;"></div>85%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>JavaScript</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 65%;"></div>65%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>TypeScript</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 55%;"></div>55%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Node.js</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 60%;"></div>60%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>React</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 60%;"></div>60%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>React Native</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 50%;"></div>50%
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Angular</td>
-                            <td>
-                                <div class="bar-container"></div>
-                                <div class="bar" style="width: 50%;"></div>50%
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-             <div class="table-wrapper">
-            <table class="skills-table">
-                <thead>
-                    <tr>
-                        <th>Creative/Media Skills</th>
-                        <th>Proficiency</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Screenwriting</td>
-                        <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 100%;"></div>Professional
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Video Editing</td>
-                         <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 100;"></div>Professional
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Podcast Production</td>
-                        <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 85%;"></div>85%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Premiere Pro</td>
-                         <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 85%;"></div>80%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>After Effects</td>
-                         <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 85%;"></div>70%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Adobe Audition</td>
-                         <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 85%;"></div>75%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SEO</td>
-                         <td>
-                            <div class="bar-container"></div>
-                            <div class="bar" style="width: 85%;"></div>65%
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
+        <div class="skills-section">
+            <section>
+                <h3>Web Development Skills</h3>
+                <ul>
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>Node.js</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>Angular</li>
+                </ul>
+            </section>
 
+            <section>
+                <h3>Creative & Media Skills</h3>
+                <ul>
+                    <li>Screenwriting</li>
+                    <li>Video Editing</li>
+                    <li>Podcast Production</li>
+                    <li>Premiere Pro</li>
+                    <li>After Effects</li>
+                    <li>Adobe Audition</li>
+                    <li>SEO</li>
+                </ul>
+            </section>
+        </div>
     </main>
 
     <footer class="page_footer">
@@ -201,11 +106,22 @@
                 <img src="./img/InBug-White.png" class="icon" alt="linkedin icon"></a>
             <a href="https://github.com/LindsellR" target="_blank">
                 <img src="./img/github-mark-white.png" class="icon" alt="github icon"></a>
-            <a href="https://x.com/LindsellR63" target="_blank"><img src="./img/x_logo-white.png" class="icon" alt="X icon"></a>
-             <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="./img/Medium-Icon-White.png" class="icon" alt="Medium icon"></a>
+            <a href="https://x.com/LindsellR63" target="_blank"><img src="./img/x_logo-white.png" class="icon"
+                    alt="X icon"></a>
+            <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="./img/Medium-Icon-White.png"
+                    class="icon" alt="Medium icon"></a>
         </div>
     </footer>
     <!-- <script src="js/tota11y.min.js"></script> -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            const navList = document.querySelector(".navigation-list");
+            navList.classList.toggle("show");
+
+            const expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+        });
+    </script>
 </body>
 
 </html>

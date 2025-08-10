@@ -23,9 +23,11 @@
             <a href="index.html">
                 <img src="img/RL_logo.svg" alt="Personal logo of Richard Lindsell" class="logo-img" />
             </a>
-            <span class="logo-text">Web Developer</span>
         </div>
-
+        <!-- Hamburger button -->
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            &#9776;
+        </button>
         <nav class="main-navigation page-header_item">
             <ul role="menubar" class="navigation-list">
                 <li role="presentation">
@@ -47,33 +49,43 @@
     </header>
 
     <main>
-        <div class="profile">
-            <div class="portrait-container">
-                <img src="img/r_lindsell_headshot3.jpg" class="profile_portrait"
-                    alt="Portrait of site owner Richard Lindsell">
+<div class="profile">
+  <div class="portrait-container">
+    <img src="img/r_lindsell_headshot3.jpg" class="profile_portrait" alt="Portrait...">
+  </div>
+  <div class="profile-content">
+    <h1>Hello World</h1>
+    <p>I'm Richard Lindsell, a developer located in Thirroul, NSW, Australia</p>
+    <a href="work.html" class="button work_button">Check out my work</a>
+  </div>
+</div>
 
-                <h1>Hello World</h1>
-                <p>
-                    I'm Richard Lindsell. I'm a web developer from Thirroul, in NSW, Australia.
-                </p>
-                <div class="work_button"></div>
-                <a href="work.html" class="button">Check out my work</a>
-            </div>
-        </div>
+
     </main>
 
     <footer class="page_footer">
         <p>Find me on</p>
         <div>
-            <a href="https://www.linkedin.com/home"  target="_blank">
+            <a href="https://www.linkedin.com/home" target="_blank">
                 <img src="./img/InBug-White.png" class="icon" alt="linkedin icon"></a>
-            <a href="https://github.com/LindsellR"  target="_blank">
+            <a href="https://github.com/LindsellR" target="_blank">
                 <img src="./img/github-mark-white.png" class="icon" alt="github icon"></a>
-            <a href="https://x.com/LindsellR63" target="_blank"><img src="./img/x_logo-white.png" class="icon" alt="X icon"></a>
-             <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="./img/Medium-Icon-White.png" class="icon" alt="Medium icon"></a>
+            <a href="https://x.com/LindsellR63" target="_blank"><img src="./img/x_logo-white.png" class="icon"
+                    alt="X icon"></a>
+            <a href="https://medium.com/@lindsellrichard" target="_blank"><img src="./img/Medium-Icon-White.png"
+                    class="icon" alt="Medium icon"></a>
         </div>
     </footer>
     <!-- <script src="js/tota11y.min.js"></script> -->
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", function () {
+            const navList = document.querySelector(".navigation-list");
+            navList.classList.toggle("show");
+
+            const expanded = this.getAttribute("aria-expanded") === "true" || false;
+            this.setAttribute("aria-expanded", !expanded);
+        });
+    </script>
 </body>
 
 </html>
