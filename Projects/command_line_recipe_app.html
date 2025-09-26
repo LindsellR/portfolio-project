@@ -52,93 +52,95 @@
     <main>
         <div class="details">
             <h1>
-                Django Recipe app
+                Python Command Line Recipe app
             </h1>
             <div class="container">
                 <h2>Project Overview</h2>
                 <p>
-                    A responsive Django web application that allows users to explore, create, and manage recipes. This
-                    full-stack project demonstrates core CRUD functionality and user account management.
+                    A Python-based command-line application that serves as the foundation for the Django web version of
+                    the Recipe app. This project highlights Python fundamentals, object-oriented programming, and basic
+                    database interaction.
                     <br>
-                    Users are able to:
+                    Key Features:
                 </p>
                 <ul>
-                    <li>Register and manage user accounts.</li>
-                    <li>Browse recipes with detailed information including ingredients, instructions, prep/cook time,
-                        difficulty, and meal type.</li>
-                    <li>Add recipes to their personal collection.</li>
-                    <li>Search recipes by title or ingredient</li>
+                    <li>Create, view, and modify recipes stored in a locally hosted MySQL database.</li>
+                    <li>Search recipes by ingredients to quickly find matching dishes.</li>
+                    <li>Automatically calculate the difficulty of a recipe based on its cooking time and number of
+                        ingredients.</li>
+                    <li>Display detailed recipe information such as ingredients, cooking time, and difficulty.</li>
                 </ul>
+                <p>This project demonstrates core Python scripting skills, efficient use of data structures, and
+                    database connectivity—laying the groundwork for building the more complex web application with
+                    Django.</p>
             </div>
 
             <div class="visual">
-                <img src="../img/projects_img/recipe_search.png " width="800px" height="auto"
+                <img src="../img/projects_img/database.png " width="800px" height="auto"
                     alt="Sample image from The Movie-Geeks-Rest API databse object ">
             </div>
 
             <div class="container">
                 <h2>Technologies Used</h2>
                 <ul>
-                    <li>Python 3 / Django 5.2</li>
-                    <li>Django Templates with HTML, CSS, and JavaScript</li>
-                    <li>SQLite (development) / Heroku Postgres (production)</li>
-                    <li>Pandas and Matplotlib for data analytics and visualization</li>
-                    <li>Pillow for image processing</li>
-                    <li>WhiteNoise for static file management</li>
-                    <li>dj-database-url and psycopg2-binary for database configuration and connectivity</li>
-                    <li>Django Widget Tweaks for enhanced form rendering</li>
-                    <li>Django ORM for database interactions</li>
-                    <li>Git &amp; GitHub for version control and repository hosting</li>
-                    <li>Heroku &amp; Gunicorn for live app deployment</li>
+                    <li>Python 3.13</li>
+                    <li>Object-Oriented Programming (OOP) in Python</li>
+                    <li>Command-line interface (CLI) development</li>
+                    <li>IPython – Enhanced interactive Python shell used during development for testing and debugging.
+                    </li>
+                    <li>bcrypt – Python library for securely hashing and verifying passwords.</li>
+                    <li>MySQL for local database storage</li>
+                    <li>SQLAlchemy ORM for database interactions</li>
+                    <li>Python standard libraries for file handling, data structures, and exception handling</li>
+                    <li>Command-Line Interface (CLI) – Text-based user interface with numbered options for simple,
+                        user-friendly navigation.</li>
+                    <li>Virtual environments and pip for package management</li>
+                    <li>Git & GitHub for version control and repository hosting</li>
                 </ul>
+
 
             </div>
 
             <div class="container">
                 <h2>Objective</h2>
                 <p>
-                    Develop a multi-user Recipe web application using the Django framework, allowing users to create,
-                    read, and modify recipes, search by ingredients, and manage content via an admin panel. The aim was
-                    to demonstrate and practice full-stack web development skills, including database integration with
-                    PostgreSQL, front-end rendering with HTML and CSS, deployment on Heroku, and best practices in
-                    coding, testing, and documentation.
+                    To build a Python-based command-line Recipe app that demonstrates core programming skills, including
+                    object-oriented design, data handling, and database interaction.
+                    The project allows users to create, read, update, and search recipes, providing a solid foundation
+                    for developing a full-stack web application in Django.
+
                 </p>
             </div>
 
             <div class="container">
                 <h2>The Experience</h2>
                 <p>
-                    I personally found the Django framework with the “batteries included” to be more intuitive to work
-                    with, the MVT architecture simplifying the process by eliminating the need for a separate controller
-                    layer. I loved the “modular” feel of the structure with the project level files, the Apps,
-                    configuration files and database files. I was able to gain hands-on experience with models, forms,
-                    views, user authentication, static and media file handling, templating, URL routing, and deploying a
-                    full-stack Django app with PostgreSQL on Heroku.
-
-                    In terms of a full stack structure I found it refreshing that instead of wiring up a separate
-                    backend API and front-end client as per JavaScript frameworks like React and Angular, I was able to
-                    build, test, and deploy everything in one coherent environment. It made development feel more
-                    streamlined and productive.
+                    Working entirely in the command line gave me a deeper understanding of Python’s development
+                    workflow, building each feature step by step, and laying the foundation for the Django recipe app.
+                    This project let me experience virtual environments, terminal commands, and Python’s object-oriented
+                    approach to variables—different from JavaScript’s loosely typed variables.
                 </p>
 
 
                 <h3>The process included:</h3>
                 <ul>
-                    <li>Creating and managing virtual environments</li>
-                    <li>Creating Django project and apps</li>
-                    <li>Creating Django models and database tables, defining views and urls</li>
-                    <li>Adding database records using Django admin panel</li>
-                    <li>Writing and implementingautomated tests</li>
-                    <li>Using the Django admin panel</li>
-                    <li>Setting up user authentication, login and logut features</li>
-                    <li>Packaging Django application and deploying it on web server</li>
+                    <li>Creating and manage virtual environments</li>
+                    <li>Using data types and methods to execute Python commands that store recipes containing their
+                        own internal data</li>
+                    <li> Building a script that uses if-elif-else statements, for loops, and functions to take recipes
+                        from
+                        the user then displaying them</li>
+                    <li>Creating a Python script that takes recipes from the user and writes the data in a binary file,
+                        then another script that reads the binary file and lists the available ingredients</li>
+                    <li>Setting up a MySQL database and connecting the scripts to it</li>
+                    <li>Building an application that creates, reads, updates, and deletes recipes, as well as searches for
+                        them by a single ingredient</li>
+                    <li>Using an Object Relational Mapper from SQLAlchemy to manage the contents of the database</li>
+                    <li>Building a user-friendly menu for entering and searching for recipes and ingredients</li> 
                 </ul>
             </div>
             <div class="applinks">
-                <a href="https://fierce-oasis-53323-7bc2a4e0b203.herokuapp.com/recipes/welcome/" target="_blank"
-                    class="app_button">Live
-                    Website</a>
-                <a href="https://github.com/LindsellR/recipe-app" target="_blank" class="app_button">Go To
+                <a href="https://github.com/LindsellR/CF_Python/blob/master/Achievement_1/Exercise_1.7/recipe_app.py" target="_blank" class="app_button">Go To
                     Github Repository</a>
                 <a href="../work.html" target="_blank" class="app_button">Go Back</a>
             </div>
